@@ -1,0 +1,211 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(140deg, #dce4f2, #0583f2);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: #dce4f2;
+
+    nav {
+        min-height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    a {
+        color: #0583f2;
+        text-decoration: none;
+    }
+}
+
+.title-accueil {
+    text-align: center;
+    color: #053cf2;
+    font-size: 3em;
+}
+
+#regle {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    section {
+        background-color: #dce4f2;
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+.title-memory {
+    text-align: center;
+    color: #053cf2;
+    font-size: 3em;
+}
+
+#window-game {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+
+    .card.flip {
+        transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+        backface-visibility: hidden;
+    }
+
+    .card {
+        margin: 5px;
+        transform: scale(1);
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+    }
+
+    .game {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1000px;
+    }
+
+    .card-front {
+        padding: 20px;
+        background: white;
+        position: absolute;
+        z-index: 0;
+        height: 200px;
+        width: 200px;
+    }
+
+    .card-back {
+        height: 240px;
+        width: 240px;
+    }
+
+    .card:hover {
+        box-shadow: 5px 5px 40px 5px #053cf2b2;
+        transition: ease-in 0.3s;
+    }
+
+    .card-back {
+        position: relative;
+        z-index: 1;
+        transform: rotateY(180deg);
+    }
+}
+
+.bg-form {
+    height: 100vh;
+
+    h1 {
+        text-align: center;
+        color: #053cf2;
+        font-size: 3em;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #dce4f2;
+        padding: 20px;
+    }
+
+    label,
+    input,
+    button {
+        margin: 2px;
+    }
+
+    .mdpforce {
+        display: flex;
+        flex-direction: row;
+    }
+
+    p {
+        margin: 10px;
+    }
+    .faible {
+        color: green;
+    }
+
+    .moyen {
+        color: orange;
+    }
+
+    .fort {
+        color: red;
+    }
+
+    .hidden {
+        visibility: hidden;
+    }
+}
+
+#profil {
+    height: 100vh;
+
+    h1 {
+        text-align: center;
+        color: #053cf2;
+        font-size: 3em;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(5deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+.wiggle {
+    animation: wiggle 1s infinite;
+}
+
+.couteau {
+    width: 50px;
+    margin-left: 70px;
+    margin-bottom: 50px;
+}

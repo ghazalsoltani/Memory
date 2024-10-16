@@ -1,0 +1,185 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(140deg, #dce4f2, #0583f2);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  background-color: #dce4f2;
+}
+header nav {
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+header a {
+  color: #0583f2;
+  text-decoration: none;
+}
+
+.title-accueil {
+  text-align: center;
+  color: #053cf2;
+  font-size: 3em;
+}
+
+#regle {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#regle section {
+  background-color: #dce4f2;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.title-memory {
+  text-align: center;
+  color: #053cf2;
+  font-size: 3em;
+}
+
+#window-game {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+#window-game .card.flip {
+  transform: rotateY(180deg);
+}
+#window-game .card-front,
+#window-game .card-back {
+  backface-visibility: hidden;
+}
+#window-game .card {
+  margin: 5px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+#window-game .game {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+#window-game .card-front {
+  padding: 20px;
+  background: white;
+  position: absolute;
+  z-index: 0;
+  height: 200px;
+  width: 200px;
+}
+#window-game .card-back {
+  height: 240px;
+  width: 240px;
+}
+#window-game .card:hover {
+  box-shadow: 5px 5px 40px 5px rgba(5, 60, 242, 0.6980392157);
+  transition: ease-in 0.3s;
+}
+#window-game .card-back {
+  position: relative;
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+.bg-form {
+  height: 100vh;
+}
+.bg-form h1 {
+  text-align: center;
+  color: #053cf2;
+  font-size: 3em;
+}
+.bg-form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bg-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #dce4f2;
+  padding: 20px;
+}
+.bg-form label,
+.bg-form input,
+.bg-form button {
+  margin: 2px;
+}
+.bg-form .mdpforce {
+  display: flex;
+  flex-direction: row;
+}
+.bg-form p {
+  margin: 10px;
+}
+.bg-form .faible {
+  color: green;
+}
+.bg-form .moyen {
+  color: orange;
+}
+.bg-form .fort {
+  color: red;
+}
+.bg-form .hidden {
+  visibility: hidden;
+}
+
+#profil {
+  height: 100vh;
+}
+#profil h1 {
+  text-align: center;
+  color: #053cf2;
+  font-size: 3em;
+}
+#profil div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(5deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+.wiggle {
+  animation: wiggle 1s infinite;
+}
+
+.couteau {
+  width: 50px;
+  margin-left: 70px;
+  margin-bottom: 50px;
+}/*# sourceMappingURL=style.css.map */

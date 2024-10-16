@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="nav-barre-main">
+            <a href="../index.html">Acceuil</a>
+            <a href="connexion.html">Connexion</a>
+        </nav>
+    </header>
+    <!-- TODO RAJOUTER LES TYPES -->
+    <main class="bg-form">
+        <h1>Inscription</h1>
+        <div>
+            <form action="" id="contactForm">
+                <label for="text">Nom d'utilisateur</label>
+                <input type="text" name="pseudo" id="pseudo" class="input">
+                <div class="message erreur" id="erreur-pseudo"></div>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="input">
+                <div class="message erreur" id="erreur-mail"></div>
+
+                <label for="motdepasse">Mot de passe</label>
+                <input type="password" name="motdepasse" id="motdepasse" class="input">
+                <div class="mdpforce">
+                    <p class="faible hidden" id="faible">faible</p>
+                    <p class="moyen hidden" id="moyen">moyen</p>
+                    <p class="fort hidden" id="fort">fort</p>
+                </div>
+                <div class="message erreur" id="erreur-motdepasse"></div>
+                <!-- <img src="../img/couteau.jpg" alt="" class="couteau"> -->
+                <label for="motdepasseconfirm">Confirmer mot de passe</label>
+                <input type="password" name="motdepasseconfirm" id="motdepasseconfirm" class="input">
+                <div class="message erreur" id="erreur-motdepasseconfirm"></div>
+
+                <button type="submit" id="submit-inscription">S'inscrire</button>
+                <button type="reset" id="reset-inscription">Annuler</button>
+            </form>
+            <div class="message success" id="message-success"></div>
+            <div class="userlist" id="userlist"></div>
+        </div>
+
+    </main>
+    <script src="../js/form.js" type="module"></script>
+</body>
+
+</html>
